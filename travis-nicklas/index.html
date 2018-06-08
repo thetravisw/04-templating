@@ -12,20 +12,22 @@
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
     <!--
-      TODO: Add a script tag to hold the Handlebars template.
+      TODO: Add a script tag to hold the Handlebars template. DONE
         - Be sure to give it a meaningful id attribute.
         - Move your old template structure to here. Remember that this template needs to have the same structure as the old one!
         - Insert placeholder keys.
         - If your object doesn't have values you need yet, you can add those properties in the model.
     -->
-    <script id= 'article-template' type="text/x-handlebars-template">
-    <h2>{{this.title}}</h2>
-    <p><a href={{this.authorUrl}}>{{this.author}}</a></p>
-    <p>{{{this.body}}}</p>
-    <p>{{this.publishStatus}}</p>
-    <!-- 
-    <p id=category>{{this.category}}</p> 
-    -->
+    <script id='article-template' type="text/x-handlebars-template">
+    <article data-category="{{category}}" data-author="{{author}}">
+    <h2>{{title}}</h2>
+    <p><a href={{authorUrl}}>{{author}}</a></p>
+    <p>{{{body}}}</p>
+    <p>{{publishStatus}}</p>
+    <a href="#" class="read-on">Read on →</a>
+    </article>
+
+    
     
     </script>
   </head>
@@ -81,9 +83,9 @@
     <footer>
       &copy; 2018 Code Fellows | Static Blog | Happy Ipsum!
     </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- TODO: Include Handlebars.JS from a CDN -->
+    <!-- TODO: Include Handlebars.JS from a CDN --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
